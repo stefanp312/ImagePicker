@@ -598,11 +598,11 @@
     [self.previewScrollView.layer addAnimation:shakeAnimation forKey:kCATransition];
 }
 
-- (void)didSelectVideoWithURL:(NSURL *)url
+- (void)didSelectVideoWithFileName:(NSString *)fileName captureImage:(UIImage *)image
 {
     if(self.viewController) {
-        if([self.viewController.imagePickerController.delegate respondsToSelector:@selector(rt_imagePickerController:didFinishPickingVideoWithURL:)]) {
-            [self.viewController.imagePickerController.delegate rt_imagePickerController:self.viewController.imagePickerController didFinishPickingVideoWithURL:url];
+        if([self.viewController.imagePickerController.delegate respondsToSelector:@selector(rt_imagePickerController:didFinishPickingVideoWithFileName:withCaptureImage:)]) {
+            [self.viewController.imagePickerController.delegate rt_imagePickerController:self.viewController.imagePickerController didFinishPickingVideoWithFileName:fileName withCaptureImage:image];
         }
     }
 }

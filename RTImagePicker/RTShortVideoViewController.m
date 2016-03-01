@@ -77,7 +77,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+
     [UIView animateWithDuration:0.3f animations:^{
         [(RTImagePickerNavigationController *)self.navigationController toolBarView].top = ScreenHeight - [(RTImagePickerNavigationController *)self.navigationController toolBarView].height;
         self.bottomBarView.top = self.navigationController.view.height;
@@ -215,9 +216,9 @@
 
 - (void)sendButtonPressed:(id)sender
 {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    [[(RTImagePickerNavigationController *)self.navigationController toolBarView] didSelectVideoWithURL:videoURL];
-}
+    [self.camera stop];
+    [self.playerView.player reset];
+    [[(RTImagePickerNavigationController *)self.navigationController toolBarView] didSelectVideoWithFileName:videoFileName captureImage:self.captureImage];}
 
 - (void)cancelButtonPressed:(id)sender
 {

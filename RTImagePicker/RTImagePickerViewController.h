@@ -17,8 +17,7 @@
 @optional
 - (void)rt_imagePickerController:(RTImagePickerViewController *)imagePickerController didFinishPickingAssets:(NSArray *)assets;
 - (void)rt_imagePickerController:(RTImagePickerViewController *)imagePickerController didFinishPickingImages:(NSArray<UIImage *> *)images;
-- (void)rt_imagePickerController:(RTImagePickerViewController *)imagePickerController didFinishPickingVideoWithURL:(NSURL *)videoURL;
-
+- (void)rt_imagePickerController:(RTImagePickerViewController *)imagePickerController didFinishPickingVideoWithFileName:(NSString *)fileName withCaptureImage:(UIImage *)image;
 - (void)rt_imagePickerControllerDidCancel:(RTImagePickerViewController *)imagePickerController;
 
 - (BOOL)rt_imagePickerController:(RTImagePickerViewController *)imagePickerController shouldSelectAsset:(PHAsset *)asset;

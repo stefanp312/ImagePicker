@@ -51,6 +51,5 @@ typedef NS_ENUM(NSInteger, RTImagePickerToolbarMode) {
  *
  *  @param url Video file url
  */
-- (void)didSelectVideoWithURL:(NSURL *)url;
-
+- (void)didSelectVideoWithFileName:(NSString *)fileName captureImage:(UIImage *)image;
 @end
