@@ -1,0 +1,877 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50042ED91C75732D00932418 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50042ED81C75732D00932418 /* main.m */; };
+		50042EDC1C75732D00932418 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50042EDB1C75732D00932418 /* AppDelegate.m */; };
+		50042EDF1C75732D00932418 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50042EDE1C75732D00932418 /* ViewController.m */; };
+		50042EE21C75732D00932418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50042EE01C75732D00932418 /* Main.storyboard */; };
+		50042EE41C75732D00932418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50042EE31C75732D00932418 /* Assets.xcassets */; };
+		50042EE71C75732D00932418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50042EE51C75732D00932418 /* LaunchScreen.storyboard */; };
+		50042EF21C75732D00932418 /* RTImagePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50042EF11C75732D00932418 /* RTImagePickerTests.m */; };
+		50042EFD1C75732E00932418 /* RTImagePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50042EFC1C75732E00932418 /* RTImagePickerUITests.m */; };
+		50042F451C7578E100932418 /* UIView+ViewFrameGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 50042F441C7578E100932418 /* UIView+ViewFrameGeometry.m */; };
+		50A4FAE21C76C13B00CC1E0A /* RTImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAE11C76C13B00CC1E0A /* RTImagePickerViewController.m */; };
+		50A4FAE51C76C18800CC1E0A /* RTAssetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAE41C76C18800CC1E0A /* RTAssetCollectionViewController.m */; };
+		50A4FAE81C76C1D100CC1E0A /* RTAssetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAE71C76C1D100CC1E0A /* RTAssetCollectionViewCell.m */; };
+		50A4FAEB1C76C1E600CC1E0A /* RTCheckMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAEA1C76C1E600CC1E0A /* RTCheckMarkView.m */; };
+		50A4FAEE1C76C1FA00CC1E0A /* RTAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAED1C76C1FA00CC1E0A /* RTAlbumTableViewCell.m */; };
+		50A4FAF51C76C23100CC1E0A /* RTVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAF41C76C23100CC1E0A /* RTVideoIconView.m */; };
+		50A4FAF81C76C24300CC1E0A /* RTVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAF71C76C24300CC1E0A /* RTVideoIndicatorView.m */; };
+		50A4FAFA1C76C86300CC1E0A /* RTImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A4FAF91C76C86300CC1E0A /* RTImagePicker.storyboard */; };
+		50A4FB001C76F01000CC1E0A /* RTImagePickerTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FAFF1C76F01000CC1E0A /* RTImagePickerTitleButton.m */; };
+		50A4FB031C76FC2100CC1E0A /* RTImagePickerToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4FB021C76FC2100CC1E0A /* RTImagePickerToolbarView.m */; };
+		50B4CE851C780B25007BD31D /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE651C780B25007BD31D /* MKAnnotationView+WebCache.m */; };
+		50B4CE861C780B25007BD31D /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE671C780B25007BD31D /* NSData+ImageContentType.m */; };
+		50B4CE871C780B25007BD31D /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE691C780B25007BD31D /* SDImageCache.m */; };
+		50B4CE881C780B25007BD31D /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE6B1C780B25007BD31D /* SDWebImageCompat.m */; };
+		50B4CE891C780B25007BD31D /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE6D1C780B25007BD31D /* SDWebImageDecoder.m */; };
+		50B4CE8A1C780B25007BD31D /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE6F1C780B25007BD31D /* SDWebImageDownloader.m */; };
+		50B4CE8B1C780B25007BD31D /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE711C780B25007BD31D /* SDWebImageDownloaderOperation.m */; };
+		50B4CE8C1C780B25007BD31D /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE731C780B25007BD31D /* SDWebImageManager.m */; };
+		50B4CE8D1C780B25007BD31D /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE761C780B25007BD31D /* SDWebImagePrefetcher.m */; };
+		50B4CE8E1C780B25007BD31D /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE781C780B25007BD31D /* UIButton+WebCache.m */; };
+		50B4CE8F1C780B25007BD31D /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE7A1C780B25007BD31D /* UIImage+GIF.m */; };
+		50B4CE901C780B25007BD31D /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE7C1C780B25007BD31D /* UIImage+MultiFormat.m */; };
+		50B4CE911C780B25007BD31D /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE7E1C780B25007BD31D /* UIImage+WebP.m */; };
+		50B4CE921C780B25007BD31D /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE801C780B25007BD31D /* UIImageView+HighlightedWebCache.m */; };
+		50B4CE931C780B25007BD31D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE821C780B25007BD31D /* UIImageView+WebCache.m */; };
+		50B4CE941C780B25007BD31D /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE841C780B25007BD31D /* UIView+WebCacheOperation.m */; };
+		50B4CE9D1C7AB063007BD31D /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE9A1C7AB063007BD31D /* LLSimpleCamera.m */; };
+		50B4CE9E1C7AB063007BD31D /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CE9C1C7AB063007BD31D /* UIImage+FixOrientation.m */; };
+		50B4CEA11C7AB0FD007BD31D /* RTCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEA01C7AB0FD007BD31D /* RTCameraViewController.m */; };
+		50B4CEA41C7AC779007BD31D /* RTCameraPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEA31C7AC779007BD31D /* RTCameraPreviewViewController.m */; };
+		50B4CEA71C7AF64E007BD31D /* RTImagePickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEA61C7AF64E007BD31D /* RTImagePickerNavigationController.m */; };
+		50B4CEAA1C7B14BA007BD31D /* RTImagePickerUnauthorizedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEA91C7B14BA007BD31D /* RTImagePickerUnauthorizedView.m */; };
+		50B4CEAD1C7C0294007BD31D /* RTShortVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEAC1C7C0294007BD31D /* RTShortVideoViewController.m */; };
+		50B4CEB31C7C4C2D007BD31D /* RTImagePickerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEB21C7C4C2D007BD31D /* RTImagePickerUtils.m */; };
+		50B4CEB61C7C4D48007BD31D /* RTImagePickerTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEB51C7C4D48007BD31D /* RTImagePickerTapDetectingView.m */; };
+		50B4CEC01C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEBF1C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.m */; };
+		50B4CEC41C7C4FC9007BD31D /* RTImagePickerPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEC11C7C4FC9007BD31D /* RTImagePickerPhoto.m */; };
+		50B4CECB1C7C509F007BD31D /* RTImagePickerPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CECA1C7C509F007BD31D /* RTImagePickerPhotoBrowser.m */; };
+		50B4CECE1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CECD1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.m */; };
+		50B4CED21C7C534F007BD31D /* RTImagePickerTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CED01C7C534F007BD31D /* RTImagePickerTapDetectingImageView.m */; };
+		50B4CEE11C7D6357007BD31D /* VIMVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEDE1C7D6357007BD31D /* VIMVideoPlayer.m */; };
+		50B4CEE21C7D6357007BD31D /* VIMVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CEE01C7D6357007BD31D /* VIMVideoPlayerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50042EEE1C75732D00932418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50042ECC1C75732D00932418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50042ED31C75732D00932418;
+			remoteInfo = RTImagePicker;
+		};
+		50042EF91C75732E00932418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50042ECC1C75732D00932418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50042ED31C75732D00932418;
+			remoteInfo = RTImagePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50042ED41C75732D00932418 /* RTImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50042ED81C75732D00932418 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50042EDA1C75732D00932418 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50042EDB1C75732D00932418 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50042EDD1C75732D00932418 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50042EDE1C75732D00932418 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		50042EE11C75732D00932418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50042EE31C75732D00932418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50042EE61C75732D00932418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50042EE81C75732D00932418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50042EED1C75732D00932418 /* RTImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50042EF11C75732D00932418 /* RTImagePickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerTests.m; sourceTree = "<group>"; };
+		50042EF31C75732D00932418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50042EF81C75732E00932418 /* RTImagePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTImagePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50042EFC1C75732E00932418 /* RTImagePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerUITests.m; sourceTree = "<group>"; };
+		50042EFE1C75732E00932418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50042F431C7578E100932418 /* UIView+ViewFrameGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewFrameGeometry.h"; sourceTree = "<group>"; };
+		50042F441C7578E100932418 /* UIView+ViewFrameGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrameGeometry.m"; sourceTree = "<group>"; };
+		50A4FAE01C76C13B00CC1E0A /* RTImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTImagePickerViewController.h; sourceTree = "<group>"; };
+		50A4FAE11C76C13B00CC1E0A /* RTImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerViewController.m; sourceTree = "<group>"; };
+		50A4FAE31C76C18800CC1E0A /* RTAssetCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTAssetCollectionViewController.h; sourceTree = "<group>"; };
+		50A4FAE41C76C18800CC1E0A /* RTAssetCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAssetCollectionViewController.m; sourceTree = "<group>"; };
+		50A4FAE61C76C1D100CC1E0A /* RTAssetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTAssetCollectionViewCell.h; sourceTree = "<group>"; };
+		50A4FAE71C76C1D100CC1E0A /* RTAssetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAssetCollectionViewCell.m; sourceTree = "<group>"; };
+		50A4FAE91C76C1E600CC1E0A /* RTCheckMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCheckMarkView.h; sourceTree = "<group>"; };
+		50A4FAEA1C76C1E600CC1E0A /* RTCheckMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCheckMarkView.m; sourceTree = "<group>"; };
+		50A4FAEC1C76C1FA00CC1E0A /* RTAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTAlbumTableViewCell.h; sourceTree = "<group>"; };
+		50A4FAED1C76C1FA00CC1E0A /* RTAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAlbumTableViewCell.m; sourceTree = "<group>"; };
+		50A4FAF31C76C23100CC1E0A /* RTVideoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVideoIconView.h; sourceTree = "<group>"; };
+		50A4FAF41C76C23100CC1E0A /* RTVideoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVideoIconView.m; sourceTree = "<group>"; };
+		50A4FAF61C76C24300CC1E0A /* RTVideoIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVideoIndicatorView.h; sourceTree = "<group>"; };
+		50A4FAF71C76C24300CC1E0A /* RTVideoIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVideoIndicatorView.m; sourceTree = "<group>"; };
+		50A4FAF91C76C86300CC1E0A /* RTImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTImagePicker.storyboard; sourceTree = "<group>"; };
+		50A4FAFE1C76F01000CC1E0A /* RTImagePickerTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTImagePickerTitleButton.h; sourceTree = "<group>"; };
+		50A4FAFF1C76F01000CC1E0A /* RTImagePickerTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerTitleButton.m; sourceTree = "<group>"; };
+		50A4FB011C76FC2100CC1E0A /* RTImagePickerToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTImagePickerToolbarView.h; sourceTree = "<group>"; };
+		50A4FB021C76FC2100CC1E0A /* RTImagePickerToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerToolbarView.m; sourceTree = "<group>"; };
+		50B4CE641C780B25007BD31D /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKAnnotationView+WebCache.h"; path = "SDWebImage/MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		50B4CE651C780B25007BD31D /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKAnnotationView+WebCache.m"; path = "SDWebImage/MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		50B4CE661C780B25007BD31D /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		50B4CE671C780B25007BD31D /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		50B4CE681C780B25007BD31D /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		50B4CE691C780B25007BD31D /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
+		50B4CE6A1C780B25007BD31D /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
+		50B4CE6B1C780B25007BD31D /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
+		50B4CE6C1C780B25007BD31D /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = SDWebImage/SDWebImageDecoder.h; sourceTree = "<group>"; };
+		50B4CE6D1C780B25007BD31D /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDecoder.m; path = SDWebImage/SDWebImageDecoder.m; sourceTree = "<group>"; };
+		50B4CE6E1C780B25007BD31D /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
+		50B4CE6F1C780B25007BD31D /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
+		50B4CE701C780B25007BD31D /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		50B4CE711C780B25007BD31D /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		50B4CE721C780B25007BD31D /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		50B4CE731C780B25007BD31D /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
+		50B4CE741C780B25007BD31D /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
+		50B4CE751C780B25007BD31D /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		50B4CE761C780B25007BD31D /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		50B4CE771C780B25007BD31D /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
+		50B4CE781C780B25007BD31D /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
+		50B4CE791C780B25007BD31D /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
+		50B4CE7A1C780B25007BD31D /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
+		50B4CE7B1C780B25007BD31D /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		50B4CE7C1C780B25007BD31D /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		50B4CE7D1C780B25007BD31D /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+WebP.h"; path = "SDWebImage/UIImage+WebP.h"; sourceTree = "<group>"; };
+		50B4CE7E1C780B25007BD31D /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+WebP.m"; path = "SDWebImage/UIImage+WebP.m"; sourceTree = "<group>"; };
+		50B4CE7F1C780B25007BD31D /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		50B4CE801C780B25007BD31D /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		50B4CE811C780B25007BD31D /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		50B4CE821C780B25007BD31D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		50B4CE831C780B25007BD31D /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		50B4CE841C780B25007BD31D /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		50B4CE991C7AB063007BD31D /* LLSimpleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLSimpleCamera.h; path = LLSimpleCamera/LLSimpleCamera.h; sourceTree = "<group>"; };
+		50B4CE9A1C7AB063007BD31D /* LLSimpleCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLSimpleCamera.m; path = LLSimpleCamera/LLSimpleCamera.m; sourceTree = "<group>"; };
+		50B4CE9B1C7AB063007BD31D /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+FixOrientation.h"; path = "LLSimpleCamera/UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		50B4CE9C1C7AB063007BD31D /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FixOrientation.m"; path = "LLSimpleCamera/UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		50B4CE9F1C7AB0FD007BD31D /* RTCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCameraViewController.h; sourceTree = "<group>"; };
+		50B4CEA01C7AB0FD007BD31D /* RTCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCameraViewController.m; sourceTree = "<group>"; };
+		50B4CEA21C7AC779007BD31D /* RTCameraPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCameraPreviewViewController.h; sourceTree = "<group>"; };
+		50B4CEA31C7AC779007BD31D /* RTCameraPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCameraPreviewViewController.m; sourceTree = "<group>"; };
+		50B4CEA51C7AF64E007BD31D /* RTImagePickerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTImagePickerNavigationController.h; sourceTree = "<group>"; };
+		50B4CEA61C7AF64E007BD31D /* RTImagePickerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerNavigationController.m; sourceTree = "<group>"; };
+		50B4CEA81C7B14BA007BD31D /* RTImagePickerUnauthorizedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTImagePickerUnauthorizedView.h; sourceTree = "<group>"; };
+		50B4CEA91C7B14BA007BD31D /* RTImagePickerUnauthorizedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerUnauthorizedView.m; sourceTree = "<group>"; };
+		50B4CEAB1C7C0294007BD31D /* RTShortVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTShortVideoViewController.h; sourceTree = "<group>"; };
+		50B4CEAC1C7C0294007BD31D /* RTShortVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTShortVideoViewController.m; sourceTree = "<group>"; };
+		50B4CEB11C7C4C2D007BD31D /* RTImagePickerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTImagePickerUtils.h; sourceTree = "<group>"; };
+		50B4CEB21C7C4C2D007BD31D /* RTImagePickerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTImagePickerUtils.m; sourceTree = "<group>"; };
+		50B4CEB41C7C4D48007BD31D /* RTImagePickerTapDetectingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerTapDetectingView.h; path = PhotoBrowser/RTImagePickerTapDetectingView.h; sourceTree = "<group>"; };
+		50B4CEB51C7C4D48007BD31D /* RTImagePickerTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTImagePickerTapDetectingView.m; path = PhotoBrowser/RTImagePickerTapDetectingView.m; sourceTree = "<group>"; };
+		50B4CEBE1C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerZoomingScrollView.h; path = PhotoBrowser/RTImagePickerZoomingScrollView.h; sourceTree = "<group>"; };
+		50B4CEBF1C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTImagePickerZoomingScrollView.m; path = PhotoBrowser/RTImagePickerZoomingScrollView.m; sourceTree = "<group>"; };
+		50B4CEC11C7C4FC9007BD31D /* RTImagePickerPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTImagePickerPhoto.m; path = PhotoBrowser/RTImagePickerPhoto.m; sourceTree = "<group>"; };
+		50B4CEC21C7C4FC9007BD31D /* RTImagePickerPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerPhoto.h; path = PhotoBrowser/RTImagePickerPhoto.h; sourceTree = "<group>"; };
+		50B4CEC31C7C4FC9007BD31D /* RTImagePickerPhotoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerPhotoProtocol.h; path = PhotoBrowser/RTImagePickerPhotoProtocol.h; sourceTree = "<group>"; };
+		50B4CEC91C7C509F007BD31D /* RTImagePickerPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerPhotoBrowser.h; path = PhotoBrowser/RTImagePickerPhotoBrowser.h; sourceTree = "<group>"; };
+		50B4CECA1C7C509F007BD31D /* RTImagePickerPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTImagePickerPhotoBrowser.m; path = PhotoBrowser/RTImagePickerPhotoBrowser.m; sourceTree = "<group>"; };
+		50B4CECC1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RTImagePickerPhotoBrowser.h"; path = "PhotoBrowser/UIImage+RTImagePickerPhotoBrowser.h"; sourceTree = "<group>"; };
+		50B4CECD1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RTImagePickerPhotoBrowser.m"; path = "PhotoBrowser/UIImage+RTImagePickerPhotoBrowser.m"; sourceTree = "<group>"; };
+		50B4CECF1C7C534F007BD31D /* RTImagePickerPhotoBrowserPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerPhotoBrowserPrivate.h; path = PhotoBrowser/RTImagePickerPhotoBrowserPrivate.h; sourceTree = "<group>"; };
+		50B4CED01C7C534F007BD31D /* RTImagePickerTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTImagePickerTapDetectingImageView.m; path = PhotoBrowser/RTImagePickerTapDetectingImageView.m; sourceTree = "<group>"; };
+		50B4CED11C7C534F007BD31D /* RTImagePickerTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTImagePickerTapDetectingImageView.h; path = PhotoBrowser/RTImagePickerTapDetectingImageView.h; sourceTree = "<group>"; };
+		50B4CEDD1C7D6357007BD31D /* VIMVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VIMVideoPlayer.h; path = VIMVideoPlayer/VIMVideoPlayer.h; sourceTree = "<group>"; };
+		50B4CEDE1C7D6357007BD31D /* VIMVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VIMVideoPlayer.m; path = VIMVideoPlayer/VIMVideoPlayer.m; sourceTree = "<group>"; };
+		50B4CEDF1C7D6357007BD31D /* VIMVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VIMVideoPlayerView.h; path = VIMVideoPlayer/VIMVideoPlayerView.h; sourceTree = "<group>"; };
+		50B4CEE01C7D6357007BD31D /* VIMVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VIMVideoPlayerView.m; path = VIMVideoPlayer/VIMVideoPlayerView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50042ED11C75732D00932418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50042EEA1C75732D00932418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50042EF51C75732E00932418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50042ECB1C75732D00932418 = {
+			isa = PBXGroup;
+			children = (
+				50042ED61C75732D00932418 /* RTImagePicker */,
+				50042EF01C75732D00932418 /* RTImagePickerTests */,
+				50042EFB1C75732E00932418 /* RTImagePickerUITests */,
+				50042ED51C75732D00932418 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50042ED51C75732D00932418 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50042ED41C75732D00932418 /* RTImagePicker.app */,
+				50042EED1C75732D00932418 /* RTImagePickerTests.xctest */,
+				50042EF81C75732E00932418 /* RTImagePickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50042ED61C75732D00932418 /* RTImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				50A4FADF1C76C10300CC1E0A /* RTImagePicker */,
+				50042EDA1C75732D00932418 /* AppDelegate.h */,
+				50042EDB1C75732D00932418 /* AppDelegate.m */,
+				50042EDD1C75732D00932418 /* ViewController.h */,
+				50042EDE1C75732D00932418 /* ViewController.m */,
+				50042EE01C75732D00932418 /* Main.storyboard */,
+				50042EE31C75732D00932418 /* Assets.xcassets */,
+				50042EE51C75732D00932418 /* LaunchScreen.storyboard */,
+				50042EE81C75732D00932418 /* Info.plist */,
+				50042ED71C75732D00932418 /* Supporting Files */,
+			);
+			path = RTImagePicker;
+			sourceTree = "<group>";
+		};
+		50042ED71C75732D00932418 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50042ED81C75732D00932418 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50042EF01C75732D00932418 /* RTImagePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				50042EF11C75732D00932418 /* RTImagePickerTests.m */,
+				50042EF31C75732D00932418 /* Info.plist */,
+			);
+			path = RTImagePickerTests;
+			sourceTree = "<group>";
+		};
+		50042EFB1C75732E00932418 /* RTImagePickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				50042EFC1C75732E00932418 /* RTImagePickerUITests.m */,
+				50042EFE1C75732E00932418 /* Info.plist */,
+			);
+			path = RTImagePickerUITests;
+			sourceTree = "<group>";
+		};
+		50A4FADF1C76C10300CC1E0A /* RTImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				50F9ECF71C859B4100D72877 /* ThirdParty */,
+				50A4FAF91C76C86300CC1E0A /* RTImagePicker.storyboard */,
+				50F9ECF41C859AFA00D72877 /* View */,
+				50F9ECF31C859AEF00D72877 /* Utils */,
+				50F9ECF21C859AD500D72877 /* Controller */,
+				50B4CE441C780A0C007BD31D /* PhotoBrowser */,
+			);
+			name = RTImagePicker;
+			sourceTree = "<group>";
+		};
+		50B4CE441C780A0C007BD31D /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				50B4CECF1C7C534F007BD31D /* RTImagePickerPhotoBrowserPrivate.h */,
+				50B4CED01C7C534F007BD31D /* RTImagePickerTapDetectingImageView.m */,
+				50B4CED11C7C534F007BD31D /* RTImagePickerTapDetectingImageView.h */,
+				50B4CEC91C7C509F007BD31D /* RTImagePickerPhotoBrowser.h */,
+				50B4CECA1C7C509F007BD31D /* RTImagePickerPhotoBrowser.m */,
+				50B4CEB41C7C4D48007BD31D /* RTImagePickerTapDetectingView.h */,
+				50B4CEB51C7C4D48007BD31D /* RTImagePickerTapDetectingView.m */,
+				50B4CEC11C7C4FC9007BD31D /* RTImagePickerPhoto.m */,
+				50B4CEC21C7C4FC9007BD31D /* RTImagePickerPhoto.h */,
+				50B4CEC31C7C4FC9007BD31D /* RTImagePickerPhotoProtocol.h */,
+				50B4CEBE1C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.h */,
+				50B4CEBF1C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.m */,
+				50B4CECC1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.h */,
+				50B4CECD1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.m */,
+			);
+			name = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		50B4CE631C780AF6007BD31D /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				50B4CE641C780B25007BD31D /* MKAnnotationView+WebCache.h */,
+				50B4CE651C780B25007BD31D /* MKAnnotationView+WebCache.m */,
+				50B4CE661C780B25007BD31D /* NSData+ImageContentType.h */,
+				50B4CE671C780B25007BD31D /* NSData+ImageContentType.m */,
+				50B4CE681C780B25007BD31D /* SDImageCache.h */,
+				50B4CE691C780B25007BD31D /* SDImageCache.m */,
+				50B4CE6A1C780B25007BD31D /* SDWebImageCompat.h */,
+				50B4CE6B1C780B25007BD31D /* SDWebImageCompat.m */,
+				50B4CE6C1C780B25007BD31D /* SDWebImageDecoder.h */,
+				50B4CE6D1C780B25007BD31D /* SDWebImageDecoder.m */,
+				50B4CE6E1C780B25007BD31D /* SDWebImageDownloader.h */,
+				50B4CE6F1C780B25007BD31D /* SDWebImageDownloader.m */,
+				50B4CE701C780B25007BD31D /* SDWebImageDownloaderOperation.h */,
+				50B4CE711C780B25007BD31D /* SDWebImageDownloaderOperation.m */,
+				50B4CE721C780B25007BD31D /* SDWebImageManager.h */,
+				50B4CE731C780B25007BD31D /* SDWebImageManager.m */,
+				50B4CE741C780B25007BD31D /* SDWebImageOperation.h */,
+				50B4CE751C780B25007BD31D /* SDWebImagePrefetcher.h */,
+				50B4CE761C780B25007BD31D /* SDWebImagePrefetcher.m */,
+				50B4CE771C780B25007BD31D /* UIButton+WebCache.h */,
+				50B4CE781C780B25007BD31D /* UIButton+WebCache.m */,
+				50B4CE791C780B25007BD31D /* UIImage+GIF.h */,
+				50B4CE7A1C780B25007BD31D /* UIImage+GIF.m */,
+				50B4CE7B1C780B25007BD31D /* UIImage+MultiFormat.h */,
+				50B4CE7C1C780B25007BD31D /* UIImage+MultiFormat.m */,
+				50B4CE7D1C780B25007BD31D /* UIImage+WebP.h */,
+				50B4CE7E1C780B25007BD31D /* UIImage+WebP.m */,
+				50B4CE7F1C780B25007BD31D /* UIImageView+HighlightedWebCache.h */,
+				50B4CE801C780B25007BD31D /* UIImageView+HighlightedWebCache.m */,
+				50B4CE811C780B25007BD31D /* UIImageView+WebCache.h */,
+				50B4CE821C780B25007BD31D /* UIImageView+WebCache.m */,
+				50B4CE831C780B25007BD31D /* UIView+WebCacheOperation.h */,
+				50B4CE841C780B25007BD31D /* UIView+WebCacheOperation.m */,
+			);
+			name = SDWebImage;
+			sourceTree = "<group>";
+		};
+		50B4CE981C7AB044007BD31D /* LLSimpleCamera */ = {
+			isa = PBXGroup;
+			children = (
+				50B4CE991C7AB063007BD31D /* LLSimpleCamera.h */,
+				50B4CE9A1C7AB063007BD31D /* LLSimpleCamera.m */,
+				50B4CE9B1C7AB063007BD31D /* UIImage+FixOrientation.h */,
+				50B4CE9C1C7AB063007BD31D /* UIImage+FixOrientation.m */,
+			);
+			name = LLSimpleCamera;
+			sourceTree = "<group>";
+		};
+		50B4CED61C7D61EA007BD31D /* VIMVideoPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				50B4CEDD1C7D6357007BD31D /* VIMVideoPlayer.h */,
+				50B4CEDE1C7D6357007BD31D /* VIMVideoPlayer.m */,
+				50B4CEDF1C7D6357007BD31D /* VIMVideoPlayerView.h */,
+				50B4CEE01C7D6357007BD31D /* VIMVideoPlayerView.m */,
+			);
+			name = VIMVideoPlayerView;
+			sourceTree = "<group>";
+		};
+		50F9ECF21C859AD500D72877 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50B4CEAB1C7C0294007BD31D /* RTShortVideoViewController.h */,
+				50B4CEAC1C7C0294007BD31D /* RTShortVideoViewController.m */,
+				50B4CE9F1C7AB0FD007BD31D /* RTCameraViewController.h */,
+				50B4CEA01C7AB0FD007BD31D /* RTCameraViewController.m */,
+				50B4CEA21C7AC779007BD31D /* RTCameraPreviewViewController.h */,
+				50B4CEA31C7AC779007BD31D /* RTCameraPreviewViewController.m */,
+				50B4CEA51C7AF64E007BD31D /* RTImagePickerNavigationController.h */,
+				50B4CEA61C7AF64E007BD31D /* RTImagePickerNavigationController.m */,
+				50A4FAE01C76C13B00CC1E0A /* RTImagePickerViewController.h */,
+				50A4FAE11C76C13B00CC1E0A /* RTImagePickerViewController.m */,
+				50A4FAE31C76C18800CC1E0A /* RTAssetCollectionViewController.h */,
+				50A4FAE41C76C18800CC1E0A /* RTAssetCollectionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		50F9ECF31C859AEF00D72877 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				50042F431C7578E100932418 /* UIView+ViewFrameGeometry.h */,
+				50042F441C7578E100932418 /* UIView+ViewFrameGeometry.m */,
+				50B4CEB11C7C4C2D007BD31D /* RTImagePickerUtils.h */,
+				50B4CEB21C7C4C2D007BD31D /* RTImagePickerUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		50F9ECF41C859AFA00D72877 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50F9ECF61C859B1600D72877 /* Cell */,
+				50F9ECF51C859B1000D72877 /* ToolBar */,
+				50B4CEA81C7B14BA007BD31D /* RTImagePickerUnauthorizedView.h */,
+				50B4CEA91C7B14BA007BD31D /* RTImagePickerUnauthorizedView.m */,
+				50A4FAFE1C76F01000CC1E0A /* RTImagePickerTitleButton.h */,
+				50A4FAFF1C76F01000CC1E0A /* RTImagePickerTitleButton.m */,
+				50A4FAF31C76C23100CC1E0A /* RTVideoIconView.h */,
+				50A4FAF41C76C23100CC1E0A /* RTVideoIconView.m */,
+				50A4FAF61C76C24300CC1E0A /* RTVideoIndicatorView.h */,
+				50A4FAF71C76C24300CC1E0A /* RTVideoIndicatorView.m */,
+				50A4FAE91C76C1E600CC1E0A /* RTCheckMarkView.h */,
+				50A4FAEA1C76C1E600CC1E0A /* RTCheckMarkView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		50F9ECF51C859B1000D72877 /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				50A4FB011C76FC2100CC1E0A /* RTImagePickerToolbarView.h */,
+				50A4FB021C76FC2100CC1E0A /* RTImagePickerToolbarView.m */,
+			);
+			name = ToolBar;
+			sourceTree = "<group>";
+		};
+		50F9ECF61C859B1600D72877 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50A4FAE61C76C1D100CC1E0A /* RTAssetCollectionViewCell.h */,
+				50A4FAE71C76C1D100CC1E0A /* RTAssetCollectionViewCell.m */,
+				50A4FAEC1C76C1FA00CC1E0A /* RTAlbumTableViewCell.h */,
+				50A4FAED1C76C1FA00CC1E0A /* RTAlbumTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		50F9ECF71C859B4100D72877 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				50B4CED61C7D61EA007BD31D /* VIMVideoPlayerView */,
+				50B4CE981C7AB044007BD31D /* LLSimpleCamera */,
+				50B4CE631C780AF6007BD31D /* SDWebImage */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50042ED31C75732D00932418 /* RTImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50042F011C75732E00932418 /* Build configuration list for PBXNativeTarget "RTImagePicker" */;
+			buildPhases = (
+				50042ED01C75732D00932418 /* Sources */,
+				50042ED11C75732D00932418 /* Frameworks */,
+				50042ED21C75732D00932418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RTImagePicker;
+			productName = RTImagePicker;
+			productReference = 50042ED41C75732D00932418 /* RTImagePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50042EEC1C75732D00932418 /* RTImagePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50042F041C75732E00932418 /* Build configuration list for PBXNativeTarget "RTImagePickerTests" */;
+			buildPhases = (
+				50042EE91C75732D00932418 /* Sources */,
+				50042EEA1C75732D00932418 /* Frameworks */,
+				50042EEB1C75732D00932418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50042EEF1C75732D00932418 /* PBXTargetDependency */,
+			);
+			name = RTImagePickerTests;
+			productName = RTImagePickerTests;
+			productReference = 50042EED1C75732D00932418 /* RTImagePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50042EF71C75732E00932418 /* RTImagePickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50042F071C75732E00932418 /* Build configuration list for PBXNativeTarget "RTImagePickerUITests" */;
+			buildPhases = (
+				50042EF41C75732E00932418 /* Sources */,
+				50042EF51C75732E00932418 /* Frameworks */,
+				50042EF61C75732E00932418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50042EFA1C75732E00932418 /* PBXTargetDependency */,
+			);
+			name = RTImagePickerUITests;
+			productName = RTImagePickerUITests;
+			productReference = 50042EF81C75732E00932418 /* RTImagePickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50042ECC1C75732D00932418 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "叔 陈";
+				TargetAttributes = {
+					50042ED31C75732D00932418 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					50042EEC1C75732D00932418 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 50042ED31C75732D00932418;
+					};
+					50042EF71C75732E00932418 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 50042ED31C75732D00932418;
+					};
+				};
+			};
+			buildConfigurationList = 50042ECF1C75732D00932418 /* Build configuration list for PBXProject "RTImagePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				es,
+				ja,
+				pl,
+				"zh-Hans",
+			);
+			mainGroup = 50042ECB1C75732D00932418;
+			productRefGroup = 50042ED51C75732D00932418 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50042ED31C75732D00932418 /* RTImagePicker */,
+				50042EEC1C75732D00932418 /* RTImagePickerTests */,
+				50042EF71C75732E00932418 /* RTImagePickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50042ED21C75732D00932418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A4FAFA1C76C86300CC1E0A /* RTImagePicker.storyboard in Resources */,
+				50042EE71C75732D00932418 /* LaunchScreen.storyboard in Resources */,
+				50042EE41C75732D00932418 /* Assets.xcassets in Resources */,
+				50042EE21C75732D00932418 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50042EEB1C75732D00932418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50042EF61C75732E00932418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50042ED01C75732D00932418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B4CEE21C7D6357007BD31D /* VIMVideoPlayerView.m in Sources */,
+				50B4CE891C780B25007BD31D /* SDWebImageDecoder.m in Sources */,
+				50B4CE941C780B25007BD31D /* UIView+WebCacheOperation.m in Sources */,
+				50A4FAF51C76C23100CC1E0A /* RTVideoIconView.m in Sources */,
+				50B4CE8C1C780B25007BD31D /* SDWebImageManager.m in Sources */,
+				50042F451C7578E100932418 /* UIView+ViewFrameGeometry.m in Sources */,
+				50042EDF1C75732D00932418 /* ViewController.m in Sources */,
+				50B4CED21C7C534F007BD31D /* RTImagePickerTapDetectingImageView.m in Sources */,
+				50B4CE9E1C7AB063007BD31D /* UIImage+FixOrientation.m in Sources */,
+				50B4CE881C780B25007BD31D /* SDWebImageCompat.m in Sources */,
+				50B4CE8B1C780B25007BD31D /* SDWebImageDownloaderOperation.m in Sources */,
+				50A4FAEB1C76C1E600CC1E0A /* RTCheckMarkView.m in Sources */,
+				50B4CE931C780B25007BD31D /* UIImageView+WebCache.m in Sources */,
+				50A4FAE21C76C13B00CC1E0A /* RTImagePickerViewController.m in Sources */,
+				50A4FAF81C76C24300CC1E0A /* RTVideoIndicatorView.m in Sources */,
+				50A4FB001C76F01000CC1E0A /* RTImagePickerTitleButton.m in Sources */,
+				50B4CE921C780B25007BD31D /* UIImageView+HighlightedWebCache.m in Sources */,
+				50042EDC1C75732D00932418 /* AppDelegate.m in Sources */,
+				50B4CEA11C7AB0FD007BD31D /* RTCameraViewController.m in Sources */,
+				50B4CECB1C7C509F007BD31D /* RTImagePickerPhotoBrowser.m in Sources */,
+				50B4CEC01C7C4FB4007BD31D /* RTImagePickerZoomingScrollView.m in Sources */,
+				50A4FAE51C76C18800CC1E0A /* RTAssetCollectionViewController.m in Sources */,
+				50B4CE8F1C780B25007BD31D /* UIImage+GIF.m in Sources */,
+				50B4CEC41C7C4FC9007BD31D /* RTImagePickerPhoto.m in Sources */,
+				50B4CE901C780B25007BD31D /* UIImage+MultiFormat.m in Sources */,
+				50B4CE911C780B25007BD31D /* UIImage+WebP.m in Sources */,
+				50B4CEA71C7AF64E007BD31D /* RTImagePickerNavigationController.m in Sources */,
+				50B4CE8D1C780B25007BD31D /* SDWebImagePrefetcher.m in Sources */,
+				50B4CEA41C7AC779007BD31D /* RTCameraPreviewViewController.m in Sources */,
+				50A4FAEE1C76C1FA00CC1E0A /* RTAlbumTableViewCell.m in Sources */,
+				50A4FB031C76FC2100CC1E0A /* RTImagePickerToolbarView.m in Sources */,
+				50A4FAE81C76C1D100CC1E0A /* RTAssetCollectionViewCell.m in Sources */,
+				50042ED91C75732D00932418 /* main.m in Sources */,
+				50B4CE851C780B25007BD31D /* MKAnnotationView+WebCache.m in Sources */,
+				50B4CE9D1C7AB063007BD31D /* LLSimpleCamera.m in Sources */,
+				50B4CEAA1C7B14BA007BD31D /* RTImagePickerUnauthorizedView.m in Sources */,
+				50B4CE8A1C780B25007BD31D /* SDWebImageDownloader.m in Sources */,
+				50B4CEB61C7C4D48007BD31D /* RTImagePickerTapDetectingView.m in Sources */,
+				50B4CE8E1C780B25007BD31D /* UIButton+WebCache.m in Sources */,
+				50B4CECE1C7C5132007BD31D /* UIImage+RTImagePickerPhotoBrowser.m in Sources */,
+				50B4CE861C780B25007BD31D /* NSData+ImageContentType.m in Sources */,
+				50B4CEB31C7C4C2D007BD31D /* RTImagePickerUtils.m in Sources */,
+				50B4CE871C780B25007BD31D /* SDImageCache.m in Sources */,
+				50B4CEAD1C7C0294007BD31D /* RTShortVideoViewController.m in Sources */,
+				50B4CEE11C7D6357007BD31D /* VIMVideoPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50042EE91C75732D00932418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50042EF21C75732D00932418 /* RTImagePickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50042EF41C75732E00932418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50042EFD1C75732E00932418 /* RTImagePickerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50042EEF1C75732D00932418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50042ED31C75732D00932418 /* RTImagePicker */;
+			targetProxy = 50042EEE1C75732D00932418 /* PBXContainerItemProxy */;
+		};
+		50042EFA1C75732E00932418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50042ED31C75732D00932418 /* RTImagePicker */;
+			targetProxy = 50042EF91C75732E00932418 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50042EE01C75732D00932418 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50042EE11C75732D00932418 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50042EE51C75732D00932418 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50042EE61C75732D00932418 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50042EFF1C75732E00932418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50042F001C75732E00932418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50042F021C75732E00932418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RTImagePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sergio.chan.RTImagePicker14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50042F031C75732E00932418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RTImagePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sergio.chan.RTImagePicker14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		50042F051C75732E00932418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RTImagePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sergio.chan.RTImagePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTImagePicker.app/RTImagePicker";
+			};
+			name = Debug;
+		};
+		50042F061C75732E00932418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RTImagePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sergio.chan.RTImagePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTImagePicker.app/RTImagePicker";
+			};
+			name = Release;
+		};
+		50042F081C75732E00932418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RTImagePickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sergio.chan.RTImagePickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RTImagePicker;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		50042F091C75732E00932418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RTImagePickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sergio.chan.RTImagePickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RTImagePicker;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50042ECF1C75732D00932418 /* Build configuration list for PBXProject "RTImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50042EFF1C75732E00932418 /* Debug */,
+				50042F001C75732E00932418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50042F011C75732E00932418 /* Build configuration list for PBXNativeTarget "RTImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50042F021C75732E00932418 /* Debug */,
+				50042F031C75732E00932418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50042F041C75732E00932418 /* Build configuration list for PBXNativeTarget "RTImagePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50042F051C75732E00932418 /* Debug */,
+				50042F061C75732E00932418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50042F071C75732E00932418 /* Build configuration list for PBXNativeTarget "RTImagePickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50042F081C75732E00932418 /* Debug */,
+				50042F091C75732E00932418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50042ECC1C75732D00932418 /* Project object */;
+}
