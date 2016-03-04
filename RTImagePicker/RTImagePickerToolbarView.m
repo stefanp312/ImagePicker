@@ -25,6 +25,10 @@
     RTCameraViewController *camera;
     
     RTImagePickerToolbarMode currentMode;
+    
+    CGPoint currentCenter;
+    CGPoint currentLocation;
+    NSInteger currentPanImageViewIndex;
 }
 
 @property (nonatomic, strong) NSMutableArray                    *selectedAssets;
@@ -65,6 +69,8 @@
         self.previewImageArray = [NSMutableArray array];
         self.previewPhotoArray = [NSMutableArray array];
         currentMode = RTImagePickerToolbarModeImagePicker;
+        currentCenter = CGPointMake(0.0f, 0.0f);
+        currentPanImageViewIndex = 0;
         
         [self initSubviews];
     }
@@ -88,6 +94,7 @@
     self.previewScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, self.height/2.0f, ScreenWidth, self.height/2.0f)];
     _previewScrollView.showsVerticalScrollIndicator = NO;
     _previewScrollView.backgroundColor = [UIColor blackColor];
+    _previewScrollView.layer.masksToBounds = NO;
     [_imagePickerToolbarBackgroundView addSubview:_previewScrollView];
     
     UIView *backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0.0f, self.height/2.0f, ScreenWidth, self.height/2.0f)];
@@ -240,8 +247,10 @@
     [self.selectedAssets addObject:asset];
     [self updateLayoutWhenUpdatingAsset];
     
-    UITapGestureRecognizer *longPress = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imagePan:)];
-    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageTap:)];
+//    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(imagePan:)];
+    UILongPressGestureRecognizer *panGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(imagePan:)];
+
     UIImageView *previewImageView = [[UIImageView alloc]initWithFrame:CGRectMake(previewImage_nextX, 4.0f, previewImage_width, previewImage_width )];
     previewImageView.contentMode = UIViewContentModeScaleAspectFill;
     previewImageView.layer.masksToBounds = YES;
@@ -266,7 +275,9 @@
                                           [self.previewPhotoArray addObject:photo];
                                           previewImageView.image = result;
                                           self.viewController.collectionView.userInteractionEnabled = YES;
-                                          [previewImageView addGestureRecognizer:longPress];
+                                          
+                                          [previewImageView addGestureRecognizer:tapGesture];
+                                          [previewImageView addGestureRecognizer:panGesture];
                                           
                                           previewImageView.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
                                           previewImageView.alpha = 0.5f;
@@ -495,7 +506,7 @@
 
 #pragma mark - Image Action
 
-- (void)imagePan:(UITapGestureRecognizer *)gesture
+- (void)imageTap:(UITapGestureRecognizer *)gesture
 {
     UIImage *currentImage = [(UIImageView *)gesture.view image];
     NSInteger currentIndex = 0;
@@ -516,6 +527,171 @@
     [browser setCurrentPhotoIndex:currentIndex];
 
     [self.viewController.navigationController pushViewController:browser animated:YES];
+}
+
+- (void)imagePan:(UILongPressGestureRecognizer *)gesture
+{
+    switch (gesture.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            UIImageView *imageView = (UIImageView *)gesture.view;
+            currentPanImageViewIndex = [self.previewImageViewArray indexOfObject:imageView];
+            currentLocation = [gesture locationInView:self.previewScrollView];
+            
+            [self.previewScrollView bringSubviewToFront:imageView];
+            currentCenter = imageView.center;
+            [imageView.layer addAnimation:[self animationForImageViewToSelected] forKey:@"fuck"];
+            self.viewController.collectionView.userInteractionEnabled = NO;
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            CGPoint point = [gesture locationInView:self.previewScrollView];
+            CGPoint translation = CGPointMake(point.x - currentLocation.x, point.y - currentLocation.y);
+            NSLog(@"pan changed with x:%f,y:%f.",translation.x,translation.y);
+            UIImageView *imageView = (UIImageView *)gesture.view;
+            imageView.center = CGPointMake(currentCenter.x + translation.x, currentCenter.y + (translation.y > 0 ? 0.0f : translation.y));
+            
+            if(translation.y > - previewImage_width) {
+                if(![imageView.layer animationForKey:@"scaleBigger"]) {
+                    if([imageView.layer animationForKey:@"scaleSmaller"]) {
+                        [imageView.layer removeAnimationForKey:@"scaleSmaller"];
+                        [imageView.layer addAnimation:[self animationForImageViewToScaleToThumb:NO] forKey:@"scaleBigger"];
+                    }
+                }
+                if(self.viewController.view.alpha < 0.7f) {
+                    [UIView animateWithDuration:0.15f animations:^{
+                        self.viewController.view.alpha = 1.0f;
+                    }];
+                }
+                [self rearrangePreviewImageView:imageView];
+            } else {
+                // Drag the imageView upward into the DELETE area
+                if(![imageView.layer animationForKey:@"scaleSmaller"]) {
+                    [imageView.layer removeAnimationForKey:@"scaleBigger"];
+                    [imageView.layer addAnimation:[self animationForImageViewToScaleToThumb:YES] forKey:@"scaleSmaller"];
+                }
+                if(self.viewController.view.alpha > 0.7f) {
+                    [UIView animateWithDuration:0.15f animations:^{
+                        self.viewController.view.alpha = 0.6f;
+                    }];
+                }
+            }
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            self.viewController.view.alpha = 1.0f;
+            UIImageView *imageView = (UIImageView *)gesture.view;
+            CGPoint point = [gesture locationInView:self.previewScrollView];
+            CGPoint translation = CGPointMake(point.x - currentLocation.x, point.y - currentLocation.y);
+            if(translation.y <  - previewImage_width) {
+                // Pan upward to delete asset
+                [UIView animateWithDuration:0.2f animations:^{
+                    imageView.alpha = 0.0f;
+                } completion:^(BOOL finished) {
+                    [imageView.layer removeAllAnimations];
+                    [self deleteAssetAtIndex:currentPanImageViewIndex];
+                    [self.viewController.collectionView reloadData];
+                    [self rearrangePreviewImageView:nil];
+                    self.viewController.collectionView.userInteractionEnabled = YES;
+                }];
+            } else {
+                CGFloat t_x = currentCenter.x + translation.x;
+                NSInteger index_end = t_x / (previewImage_width + previewImage_margin);
+                if(index_end == currentPanImageViewIndex) {
+                    // Not changing index
+                    imageView.center = currentCenter;
+                } else {
+                    // Change its index, replace everything
+                    UIImage *t_image = [self.previewImageArray objectAtIndex:currentPanImageViewIndex];
+                    RTImagePickerPhoto *t_photo = [self.previewPhotoArray objectAtIndex:currentPanImageViewIndex];
+                    
+                    [self.previewImageViewArray removeObject:imageView];
+                    [self.previewImageViewArray insertObject:imageView atIndex:index_end];
+                    
+                    [self.previewImageArray removeObject:t_image];
+                    [self.previewImageArray insertObject:t_image atIndex:index_end];
+                    
+                    [self.previewPhotoArray removeObject:t_photo];
+                    [self.previewPhotoArray insertObject:t_photo atIndex:index_end];
+                }
+                [self rearrangePreviewImageView:nil];
+                self.viewController.collectionView.userInteractionEnabled = YES;
+            }
+        }
+            break;
+        default:
+        {
+            // reset state
+            self.viewController.collectionView.userInteractionEnabled = YES;
+            UIImageView *imageView = (UIImageView *)gesture.view;
+            imageView.center = currentCenter;
+            [imageView.layer removeAllAnimations];
+            [self rearrangePreviewImageView:imageView];
+        }
+            break;
+    }
+}
+
+#pragma mark - Animation method
+
+- (CABasicAnimation *)animationForImageViewToScaleToThumb:(BOOL)isThumb
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    if(isThumb) {
+        animation.fromValue = [NSNumber numberWithFloat:1.0f];
+        animation.toValue = [NSNumber numberWithFloat:0.5f];
+    } else {
+        animation.fromValue = [NSNumber numberWithFloat:0.5f];
+        animation.toValue = [NSNumber numberWithFloat:1.0f];
+    }
+    animation.duration = 0.15f;
+    animation.repeatCount = 1;
+    animation.fillMode = kCAFillModeForwards;
+    animation.autoreverses = NO;
+    animation.removedOnCompletion = NO;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.speed = 1.0f;
+    animation.beginTime = 0.0f;
+    return animation;
+}
+
+- (CABasicAnimation *)animationForImageViewToSelected
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = [NSNumber numberWithFloat:0.9f];
+    animation.toValue = [NSNumber numberWithFloat:1.2f];
+    animation.duration = 0.15f;
+    animation.repeatCount = 1;
+    animation.fillMode = kCAFillModeForwards;
+    animation.autoreverses = YES;
+    animation.removedOnCompletion = YES;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.speed = 1.0f;
+    animation.beginTime = 0.0f;
+    return animation;
+}
+
+- (void)rearrangePreviewImageView:(UIImageView *)targetImageView
+{
+    [UIView animateWithDuration:0.2f animations:^{
+        CGFloat nextX = 0.0f;
+        CGFloat centerX = targetImageView.center.x;
+        
+        for(UIImageView *imageView in self.previewImageViewArray) {
+            if(![imageView isEqual:targetImageView]) {
+                imageView.top = previewImage_margin;
+                if(centerX - nextX <  previewImage_width && centerX - nextX > 0) {
+                    nextX += previewImage_margin + previewImage_width;
+                    imageView.left = nextX;
+                } else {
+                    imageView.left = nextX;
+                }
+                nextX += previewImage_margin + previewImage_width;
+            }
+        }
+    }];
 }
 
 #pragma mark - MWPhotoBrowserDelegate
