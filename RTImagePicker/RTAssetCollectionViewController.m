@@ -121,7 +121,6 @@ static NSString * const reuseIdentifier = @"AssetCell";
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     
     [self setupToolBarView];
-    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -143,6 +142,7 @@ static NSString * const reuseIdentifier = @"AssetCell";
     if(self.toolBarView) {
         [self.toolBarView SwitchToMode:RTImagePickerToolbarModeImagePicker];
     }
+    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
 }
 
 - (void)scrollToBottomAnimated:(BOOL)animated
@@ -159,6 +159,7 @@ static NSString * const reuseIdentifier = @"AssetCell";
     [super viewWillDisappear:animated];
     
     self.disableScrollToBottom = YES;
+    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -187,7 +188,7 @@ static NSString * const reuseIdentifier = @"AssetCell";
 - (void)dealloc
 {
     // Deregister observer
-    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
+//    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
 }
 
 #pragma mark - Accessors
@@ -357,7 +358,7 @@ static NSString * const reuseIdentifier = @"AssetCell";
         
         [self.fetchResults enumerateObjectsUsingBlock:^(PHFetchResult *fetchResult, NSUInteger index, BOOL *stop) {
             PHFetchResultChangeDetails *changeDetails = [changeInstance changeDetailsForFetchResult:fetchResult];
-            
+                      
             if (changeDetails) {
                 [fetchResults replaceObjectAtIndex:index withObject:changeDetails.fetchResultAfterChanges];
             }
