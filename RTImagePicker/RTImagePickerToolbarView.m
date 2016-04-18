@@ -608,13 +608,25 @@
                     RTImagePickerPhoto *t_photo = [self.previewPhotoArray objectAtIndex:currentPanImageViewIndex];
                     
                     [self.previewImageViewArray removeObject:imageView];
-                    [self.previewImageViewArray insertObject:imageView atIndex:index_end];
+                    if (index_end >= _previewImageViewArray.count) {
+                        [_previewImageViewArray addObject:imageView];
+                    } else {
+                        [_previewImageViewArray insertObject:imageView atIndex:index_end];
+                    }
                     
                     [self.previewImageArray removeObject:t_image];
-                    [self.previewImageArray insertObject:t_image atIndex:index_end];
+                    if (index_end >= _previewImageArray.count) {
+                        [_previewImageArray addObject:t_image];
+                    } else {
+                        [_previewImageArray insertObject:t_image atIndex:index_end];
+                    }
                     
                     [self.previewPhotoArray removeObject:t_photo];
-                    [self.previewPhotoArray insertObject:t_photo atIndex:index_end];
+                    if (index_end >= _previewPhotoArray.count) {
+                        [_previewPhotoArray addObject:t_photo];
+                    } else {
+                        [_previewPhotoArray insertObject:t_photo atIndex:index_end];
+                    }
                 }
                 [self rearrangePreviewImageView:nil];
                 self.viewController.collectionView.userInteractionEnabled = YES;
